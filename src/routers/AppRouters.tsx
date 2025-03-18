@@ -14,7 +14,7 @@ export const AppRouters = () => {
       <Routes>
         <Route element={<FormLayout />}>
           <Route path={Path.Start} element={<StartPage />} />
-          <Route path={Path.Form} element={<FormPage />} />
+          <Route path={`${Path.Form}/:pageId`} element={<FormPage />} />
           <Route
             path={`${Path.Form}/${Path.Sucess}`}
             element={<SucessPage />}
