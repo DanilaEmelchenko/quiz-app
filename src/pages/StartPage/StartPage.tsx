@@ -19,7 +19,7 @@ export const StartPage = () => {
           <Typography variant="body1" paragraph>
             Выберите правильные ответы на вопросы. Удачи!
           </Typography>
-          <Link to={Path.Form}>
+          <Link to={`${Path.Form}/1`}>
             <Button variant="contained" color="primary" size="large">
               Начать тест
             </Button>
