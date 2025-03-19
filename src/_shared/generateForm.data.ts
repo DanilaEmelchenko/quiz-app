@@ -6,7 +6,7 @@ export const generateForm = (): IGenerateForm => {
       timerSecond: 60,
       enabled: true,
     },
-    pagesForQuiz: [
+    pages: [
       {
         id: 1,
         questionNumber: "Вопрос 1",

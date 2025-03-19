@@ -1,46 +1,43 @@
+import { ReactNode } from "react";
+
 export interface IGenerateForm {
-  timerForQuiz: ITimerForQuiz;
-  pagesForQuiz: IPagesForQuiz[];
+  timerForQuiz: ITimer;
+  pages: IFormPages[];
 }
 
-export interface ITimerForQuiz {
+export interface ITimer {
   timerSecond: number;
   enabled: boolean;
 }
 
-export interface IPagesForQuiz {
+export interface IFormPages {
   id: number;
   questionNumber: string;
   title: string;
-  fields: IFields[];
+  fields: IFormField[];
 }
 
-export interface IFields {
+export interface IFormField {
   id: string;
   radioParams?: {
-    items: IRadioItem[];
+    items: IFormRadioItem[];
   };
-  inputParams?: IInputItem;
+  inputParams?: IFormInputItem;
   checkboxParams?: {
-    items: ICheckboxItem[];
+    items: IFormCheckboxItem[];
   };
-  textareaParams?: ITextareaItem;
+  textareaParams?: IFormTextareaItem;
 }
 
-export interface IRadioItem {
+export interface IFormRadioItem {
   id: string;
-  content: string;
+  content: ReactNode;
 }
 
-export interface IInputItem {
+export interface IFormCheckboxItem extends IFormRadioItem {}
+
+export interface IFormTextareaItem {
   placeholder: string;
 }
 
-export interface ICheckboxItem {
-  id: string;
-  content: string;
-}
-
-export interface ITextareaItem {
-  placeholder: string;
-}
+export interface IFormInputItem extends IFormTextareaItem {}
