@@ -2,9 +2,9 @@ import { IGenerateForm } from "./interfaces";
 
 export const generateForm = (): IGenerateForm => {
   return {
-    timerForQuiz: {
-      timerSecond: 60,
+    timer: {
       enabled: true,
+      timerSecond: 60,
     },
     pages: [
       {

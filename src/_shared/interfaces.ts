@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
 
 export interface IGenerateForm {
-  timerForQuiz: ITimer;
+  timer: ITimer;
   pages: IFormPages[];
 }
 
 export interface ITimer {
-  timerSecond: number;
   enabled: boolean;
+  timerSecond: number | null;
 }
 
 export interface IFormPages {
